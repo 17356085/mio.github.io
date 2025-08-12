@@ -1,0 +1,196 @@
+{
+  "main": {
+    "id": "9c93d3538d05a36d",
+    "type": "split",
+    "children": [
+      {
+        "id": "f050c7978393f823",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2971defb89f593b1",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "347ed6f0efd16c6c",
+    "type": "split",
+    "children": [
+      {
+        "id": "5856b11d42e7e4d8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7580d1cbf6a887c7",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "20c85d7de9454eb9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "549737849206977b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "7804f98cafdef041",
+    "type": "split",
+    "children": [
+      {
+        "id": "a7e579d0e5e48f8b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2652aa4ad2ae7a5c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "src/content/posts/2025/这是我的第一篇博客.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "这是我的第一篇博客 的反向链接列表"
+            }
+          },
+          {
+            "id": "7f4da73563690d95",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "src/content/posts/2025/这是我的第一篇博客.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "这是我的第一篇博客 的出链列表"
+            }
+          },
+          {
+            "id": "746f680585f52e39",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "de2ebe0f4447e200",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "src/content/posts/2025/这是我的第一篇博客.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "这是我的第一篇博客 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "7580d1cbf6a887c7",
+  "lastOpenFiles": [
+    "dist/pagefind/fragment/zh-cn_909fc61.pf_fragment",
+    "dist/pagefind/index/zh-cn_9a4a4e5.pf_index",
+    "dist/pagefind/fragment/zh-cn_c5d519b.pf_fragment",
+    "dist/pagefind/fragment/zh-cn_acf9b9a.pf_fragment",
+    "dist/pagefind/fragment/zh-cn_8fa3962.pf_fragment",
+    "dist/pagefind/fragment/zh-cn_1ed3fb1.pf_fragment",
+    "dist/pagefind/pagefind-modular-ui.css",
+    "dist/pagefind/index",
+    "dist/pagefind/pagefind.js",
+    "dist/pagefind/wasm.unknown.pagefind",
+    "dist/pagefind/pagefind.zh-cn_5d93cc713e7a1.pf_meta",
+    "dist/_astro/苍崎青子.CEQ85EhD_ZTKIf.webp",
+    "dist/_astro/魔法使之夜.BbR0eWzz_D2ESC.webp",
+    "dist/_astro/cover.CgGywNHJ.jpeg",
+    "dist/_astro/demo-avatar.CxcI0ivM.png",
+    "dist/_astro/demo-banner.WD4SMgz_.png",
+    "dist/favicon/favicon-light-32.png",
+    "dist/favicon/favicon-light-180.png",
+    "dist/favicon/favicon-light-192.png",
+    "dist/favicon/favicon-light-128.png",
+    "dist/favicon/favicon-dark-32.png",
+    "docs/README.md",
+    "未命名.canvas",
+    "src/content/posts/2025/这是我的第一篇博客.md",
+    "src/content/posts/2025/成功部署博客到GithubPages.md",
+    "src/content/posts/2025/project.md"
+  ]
+}
