@@ -166,6 +166,7 @@
   },
   "active": "7580d1cbf6a887c7",
   "lastOpenFiles": [
+    "public/robots.txt",
     "dist/BingSiteAuth.xml",
     "BingSiteAuth.xml",
     "dist/pagefind/index/zh-cn_6e8c1ab.pf_index",
@@ -176,7 +177,6 @@
     "dist/pagefind/pagefind-ui.js",
     "dist/pagefind/pagefind.zh-cn_a7c2b6e036ede.pf_meta",
     "dist/pagefind/wasm.unknown.pagefind",
-    "dist/pagefind/pagefind.js",
     "dist/_astro/苍崎青子.CEQ85EhD_ZTKIf.webp",
     "dist/_astro/魔法使之夜.BbR0eWzz_D2ESC.webp",
     "dist/favicon/favicon-light-32.png",
