@@ -1,12 +1,11 @@
 ---
-title: '我的第一篇博客文章'
-published: 2025-08-12  # 注意这里改为 published 而不是 pubDate
+title: 'GithubPages部署成功!!'
+published: 2025-08-11  # 注意这里改为 published 而不是 pubDate
 description: '这是我 Astro 博客的第一篇文章。'
 author: 'Astro 学习者'
-image: '../../../assets/images/魔法使之夜.jpg'
-tags: ["编程学习"]
-category: 学习记录
-updated: 2025-08-10  
+tags: ["博客开发"]
+category: 博客开发
+updated: 2025-08-12  
 ---
 
 # 我的第一篇博客文章
