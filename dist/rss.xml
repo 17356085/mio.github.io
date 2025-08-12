@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>mio的博客</title><description>四季正与你擦肩而过</description><link>https://mio.github.io/</link><language>zh_CN</language><item><title>我的第一篇博客文章</title><link>https://mio.github.io/posts/2025/%E8%BF%99%E6%98%AF%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</link><guid isPermaLink="true">https://mio.github.io/posts/2025/%E8%BF%99%E6%98%AF%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid><description>这是我 Astro 博客的第一篇文章。</description><pubDate>Tue, 12 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;我的第一篇博客文章&lt;/h1&gt;
+&lt;p&gt;欢迎来到我学习关于 Astro 的新博客！在这里，我将分享我建立新网站的学习历程。&lt;/p&gt;
+&lt;h2&gt;我做了什么&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;安装 Astro&lt;/strong&gt;：首先，我创建了一个新的 Astro 项目并设置好了我的在线账号。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;制作页面&lt;/strong&gt;：然后我学习了如何通过创建新的 &lt;code&gt;.astro&lt;/code&gt; 文件并将它们保存在 &lt;code&gt;src/pages/&lt;/code&gt; 文件夹里来制作页面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;发表博客文章&lt;/strong&gt;：这是我的第一篇博客文章！我现在有用 Astro 编写的页面和用 Markdown 写的文章了！&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;下一步计划&lt;/h2&gt;
+&lt;p&gt;我将完成 Astro 教程，然后继续编写更多内容。关注我以获取更多信息。&lt;/p&gt;
+</content:encoded></item><item><title>我的技术学习笔记</title><link>https://mio.github.io/posts/guide/</link><guid isPermaLink="true">https://mio.github.io/posts/guide/</guid><description>记录我在编程学习路上的点滴心得与遇到的问题</description><pubDate>Tue, 12 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;大家好！这是我用 Fuwari 模板搭建的第一个博客，主要用来记录我的编程学习历程。&lt;/p&gt;
+&lt;h2&gt;今日学习内容&lt;/h2&gt;
+&lt;p&gt;今天主要学习了 Markdown 的基本语法和 Fuwari 模板的使用方法，总结几点收获：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Markdown 标题&lt;/strong&gt;：用 &lt;code&gt;#&lt;/code&gt; 符号表示，最多支持 6 级标题&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;代码块&lt;/strong&gt;：用 ``` 包裹，可以指定语言类型，例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 简单的打印语句
+console.log(&quot;Hello, Fuwari!&quot;);&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content:encoded></item></channel></rss>
