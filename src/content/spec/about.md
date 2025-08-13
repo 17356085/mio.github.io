@@ -2,7 +2,7 @@
 
 这是博客的github仓库 [mio](https://github.com/17356085).
 
-::github{repo="17356085.github.io"}
+::github{repo="17356085/17356085.github.io"}
 
 > ### 施工中🚧
 >

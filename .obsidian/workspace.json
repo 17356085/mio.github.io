@@ -11,10 +11,10 @@
             "id": "2971defb89f593b1",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -164,29 +164,29 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "7580d1cbf6a887c7",
+  "active": "2971defb89f593b1",
   "lastOpenFiles": [
-    "dist/pagefind/fragment/zh-cn_8fa3962.pf_fragment",
-    "dist/pagefind/fragment/zh-cn_fd1f83e.pf_fragment",
     "dist/pagefind/fragment/zh-cn_909fc61.pf_fragment",
-    "dist/pagefind/fragment/zh-cn_7d17d5e.pf_fragment",
+    "dist/pagefind/index/zh-cn_73b3be8.pf_index",
+    "dist/pagefind/fragment/zh-cn_fd1f83e.pf_fragment",
+    "dist/pagefind/fragment/zh-cn_8fa3962.pf_fragment",
     "dist/pagefind/fragment/zh-cn_1ed3fb1.pf_fragment",
-    "dist/pagefind/index/zh-cn_31fd6dd.pf_index",
-    "dist/pagefind/fragment",
+    "dist/pagefind/fragment/zh-cn_3e75e1f.pf_fragment",
     "dist/pagefind/wasm.unknown.pagefind",
-    "dist/pagefind/pagefind.zh-cn_33674da79cb9e.pf_meta",
-    "dist/pagefind/pagefind-ui.js",
+    "dist/pagefind/pagefind.zh-cn_dc684ba743819.pf_meta",
     "dist/pagefind/pagefind.js",
+    "dist/pagefind/pagefind-ui.js",
+    "dist/pagefind/pagefind-modular-ui.js",
     "dist/_astro/苍崎青子.CEQ85EhD_ZTKIf.webp",
     "dist/_astro/祥子.PubFqEXK_1Lzh0b.webp",
     "dist/_astro/魔法使之夜.BbR0eWzz_D2ESC.webp",
     "dist/_astro/祥子.PubFqEXK.png",
-    "dist/_astro/demo-banner.WD4SMgz_.png",
-    "dist/_astro/苍崎青子.CEQ85EhD.jpg",
-    "dist/_astro/cover.CgGywNHJ.jpeg",
-    "dist/_astro/demo-avatar.CxcI0ivM.png",
     "dist/favicon/favicon.jpg",
     "dist/favicon/favicon-light-32.png",
+    "dist/favicon/favicon-light-192.png",
+    "dist/favicon/favicon-light-180.png",
+    "dist/favicon/favicon-light-128.png",
+    "dist/favicon/favicon-dark-32.png",
     "src/content/posts/2025/git笔记.md",
     "docs/README.md",
     "未命名.canvas",

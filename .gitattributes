@@ -1,4 +1,4 @@
-* text=auto
+* text=auto eol=lf
 *.html text eol=lf
 *.json text eol=lf
 *.xml text eol=lf

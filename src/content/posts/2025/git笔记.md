@@ -3,9 +3,10 @@ title: 'Git笔记'
 published: 2025-08-13
 description: '一些git常用的指令。'
 author: 'Astro 学习者'
-tags: ["git, 后端开发"]
+tags: ["git", "后端开发"]
 category: 后端 
 image: '../../../assets/images/祥子.png'
+updated: 2025-08-13
 ---
 
 以下是 Git 最常用的核心指令清单，分为 **基础操作**、**分支管理**、**撤销操作** 和 **远程协作** 四类，附带通俗解释：

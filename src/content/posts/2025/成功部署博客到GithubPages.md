@@ -5,7 +5,6 @@ description: '这是我 Astro 博客的第一篇文章。'
 author: 'Astro 学习者'
 tags: ["博客开发"]
 category: 博客开发
-updated: 2025-08-12  
 ---
 
 # 我的第一篇博客文章
