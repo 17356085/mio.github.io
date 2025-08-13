@@ -192,6 +192,95 @@
   df = diff
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
+</content:encoded></item><item><title>为博客配置评论区</title><link>https://17356085.github.io/posts/2025/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%8A%9F%E8%83%BD/</link><guid isPermaLink="true">https://17356085.github.io/posts/2025/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%8A%9F%E8%83%BD/</guid><description>还支持亮色暗色模式切换</description><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;为博客配置评论区&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;在 misc 目录下新建 Giscus.astro 文件，内容如下（用你自己的参数替换）：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&quot;giscus-comments&quot;&amp;gt;&amp;lt;/div&amp;gt;
+
+&amp;lt;script src=&quot;https://giscus.app/client.js&quot;
+
+  data-repo=&quot;17356085/17356085.github.io&quot;
+
+  data-repo-id=&quot;R_kgDOPcYMPg&quot;
+
+  data-category=&quot;Announcements&quot;
+
+  data-category-id=&quot;DIC_kwDOPcYMPs4CuH1t&quot;
+
+  data-mapping=&quot;pathname&quot;
+
+  data-strict=&quot;0&quot;
+
+  data-reactions-enabled=&quot;1&quot;
+
+  data-emit-metadata=&quot;0&quot;
+
+  data-input-position=&quot;bottom&quot;
+
+  data-theme=&quot;{theme}&quot;
+
+  data-lang=&quot;zh-CN&quot;
+
+  crossorigin=&quot;anonymous&quot;
+
+  async&amp;gt;
+
+&amp;lt;/script&amp;gt;
+
+&amp;lt;script is:inline&amp;gt;
+  // 你站点的暗色主题 class，通常是 &apos;dark&apos;
+  const DARK_CLASS = &apos;dark&apos;;
+  // giscus 支持的主题名
+  const LIGHT_THEME = &apos;light&apos;;
+  const DARK_THEME = &apos;dark&apos;;
+
+  function setGiscusTheme(theme) {
+    const iframe = document.querySelector(&apos;iframe.giscus-frame&apos;);
+    if (!iframe) return;
+    iframe.contentWindow.postMessage(
+      {
+        giscus: {
+          setConfig: {
+            theme: theme,
+          },
+        },
+      },
+      &apos;https://giscus.app&apos;
+    );
+  }
+
+  // 检查当前主题
+  function getCurrentTheme() {
+    return document.documentElement.classList.contains(DARK_CLASS) ? DARK_THEME : LIGHT_THEME;
+  }
+
+  // 初始设置
+  window.addEventListener(&apos;DOMContentLoaded&apos;, () =&amp;gt; {
+    setTimeout(() =&amp;gt; setGiscusTheme(getCurrentTheme()), 500);
+  });
+
+  // 监听主题切换（假设你的主题切换会修改 &amp;lt;html&amp;gt; 的 class）
+  const observer = new MutationObserver(() =&amp;gt; {
+    setGiscusTheme(getCurrentTheme());
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: [&apos;class&apos;] });
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;在 [...slug].astro 中这样导入和使用：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;import Giscus from &quot;../../components/misc/Giscus.astro&quot;;
+// ...existing code...
+
+&amp;lt;!-- 推荐插入在 License 之后、分页导航之前 --&amp;gt;
+{licenseConfig.enable &amp;amp;&amp;amp; &amp;lt;License ... /&amp;gt;}
+&amp;lt;Giscus /&amp;gt;
+
+&amp;lt;div class=&quot;flex flex-col md:flex-row justify-between mb-4 gap-4 overflow-hidden w-full&quot;&amp;gt;
+  {/* ...分页导航... */}
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>我的技术学习笔记</title><link>https://17356085.github.io/posts/guide/</link><guid isPermaLink="true">https://17356085.github.io/posts/guide/</guid><description>记录我在编程学习路上的点滴心得与遇到的问题</description><pubDate>Tue, 12 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;大家好！这是我用 Fuwari 模板搭建的第一个博客，主要用来记录我的编程学习历程。&lt;/p&gt;
 &lt;h2&gt;今日学习内容&lt;/h2&gt;
 &lt;p&gt;今天主要学习了 Markdown 的基本语法和 Fuwari 模板的使用方法，总结几点收获：&lt;/p&gt;
