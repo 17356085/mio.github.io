@@ -192,9 +192,18 @@
   df = diff
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
-</content:encoded></item><item><title>为博客配置评论区</title><link>https://17356085.github.io/posts/2025/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%8A%9F%E8%83%BD/</link><guid isPermaLink="true">https://17356085.github.io/posts/2025/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%8A%9F%E8%83%BD/</guid><description>还支持亮色暗色模式切换</description><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;为博客配置评论区&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;在 misc 目录下新建 Giscus.astro 文件，内容如下（用你自己的参数替换）：&lt;/li&gt;
+</content:encoded></item><item><title>为博客配置评论区</title><link>https://17356085.github.io/posts/2025/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%8A%9F%E8%83%BD/</link><guid isPermaLink="true">https://17356085.github.io/posts/2025/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%8A%9F%E8%83%BD/</guid><description>还支持亮色暗色模式切换</description><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;配置 GitHub 仓库
+进入 giscus 官网。
+按页面提示，选择你的 GitHub 仓库（建议用你的博客源码仓库或专门新建一个公开仓库）。
+授权 giscus 访问你的仓库，并自动创建 Discussions。
+选择 Discussions 分类（如 General），并设置其它参数（如主题、语言等）。
+页面下方会生成一段 &amp;lt;script ...&amp;gt;&amp;lt;/script&amp;gt; 代码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在 misc 目录下新建 Giscus.astro 文件，内容如下（用你自己的参数替换）：&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;div id=&quot;giscus-comments&quot;&amp;gt;&amp;lt;/div&amp;gt;
 
