@@ -177,15 +177,16 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "terminal:Open terminal": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian42-brat:BRAT": false
     }
   },
   "active": "7154cefd8b31c5aa",
   "lastOpenFiles": [
-    "src/content/posts/2025/成功部署博客到GithubPages.md",
-    "Invalid date.md",
-    "src/content/posts/2025/测试通过Obsidian管理博客文章.md",
     "src/content/posts/2025/为博客添加评论区功能.md",
+    "src/content/posts/2025/成功部署博客到GithubPages.md",
+    "src/content/posts/2025/测试通过Obsidian管理博客文章.md",
+    "Invalid date.md",
     "src/content/posts/2025/git笔记.md",
     "src/content/posts/2025/这是我的第一篇博客.md",
     "src/content/posts/2025/测试CI/测试CICD功能是否正常.md",

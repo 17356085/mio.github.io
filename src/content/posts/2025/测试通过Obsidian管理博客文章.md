@@ -13,4 +13,4 @@ tags: ["博客开发"]
 category: 博客开发
 
 ---
-Hello Obsidian！！
+OK,Hello Obsidian！！
