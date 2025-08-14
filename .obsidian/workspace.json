@@ -150,13 +150,23 @@
               "icon": "lucide-list",
               "title": "这是我的第一篇博客 的大纲"
             }
+          },
+          {
+            "id": "deef6bbf3d1b7ba3",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -165,24 +175,25 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "terminal:Open terminal": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "2971defb89f593b1",
   "lastOpenFiles": [
+    "src/content/posts/2025/测试CI/测试CICD功能是否正常.md",
+    "pnpm-lock.yaml.902496049",
+    "node_modules/@xt0rted",
+    "_tmp_17700_c864e0db319a8dc2934b60eb42df7de7",
     "src/components/widget/Comments.svelte",
     "src/content/posts/2025/为博客添加评论区功能.md",
     "dist/_astro/about.BtniRLn_.css",
     "dist/_astro/_page_.CO27kg37.css",
     "dist/_astro/_page_.Cq1idFFY.css",
-    "src/content/posts/2025/测试CI/测试CICD功能是否正常.md",
     "src/content/posts/2025/测试CI/CDg",
     "src/content/posts/2025/测试CI",
     "workflows/deploy.yml",
-    "workflows",
-    "dist/pagefind/index/zh-cn_3183246.pf_index",
-    "dist/pagefind/fragment/zh-cn_fd1f83e.pf_fragment",
-    "dist/pagefind/fragment/zh-cn_8fa3962.pf_fragment",
     "dist/_astro/魔法使之夜.BbR0eWzz_D2ESC.webp",
     "dist/_astro/祥子.PubFqEXK_1Lzh0b.webp",
     "dist/_astro/苍崎青子.CEQ85EhD_ZTKIf.webp",
