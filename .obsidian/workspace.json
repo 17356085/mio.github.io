@@ -170,6 +170,7 @@
   },
   "active": "2971defb89f593b1",
   "lastOpenFiles": [
+    "src/components/widget/Comments.svelte",
     "src/content/posts/2025/为博客添加评论区功能.md",
     "dist/_astro/about.BtniRLn_.css",
     "dist/_astro/_page_.CO27kg37.css",
