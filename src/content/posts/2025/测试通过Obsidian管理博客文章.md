@@ -1,8 +1,8 @@
 ---
 
-title: 'GithubPages部署成功!!'
+title: '测试Obsidian管理博客的文章'
 
-published: 2025-08-11  # 注意这里改为 published 而不是 pubDate
+published: 2025-08-14
 
 description: '这是我 Astro 博客的第一篇文章。'
 

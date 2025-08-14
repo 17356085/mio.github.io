@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f050c7978393f823",
+        "id": "56c75d5fb2f30ce6",
         "type": "tabs",
         "children": [
           {
-            "id": "2971defb89f593b1",
+            "id": "7154cefd8b31c5aa",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -180,14 +180,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2971defb89f593b1",
+  "active": "7154cefd8b31c5aa",
   "lastOpenFiles": [
+    "src/content/posts/2025/成功部署博客到GithubPages.md",
+    "Invalid date.md",
+    "src/content/posts/2025/测试通过Obsidian管理博客文章.md",
     "src/content/posts/2025/为博客添加评论区功能.md",
     "src/content/posts/2025/git笔记.md",
     "src/content/posts/2025/这是我的第一篇博客.md",
-    "src/content/posts/2025/成功部署博客到GithubPages.md",
     "src/content/posts/2025/测试CI/测试CICD功能是否正常.md",
-    "src/content/posts/2025/测试通过Obsidian管理博客文章.md",
     "pnpm-lock.yaml.902496049",
     "node_modules/@xt0rted",
     "_tmp_17700_c864e0db319a8dc2934b60eb42df7de7",
