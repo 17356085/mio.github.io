@@ -1,12 +1,13 @@
 ---
-title: 测试使用obsidian快速创建博客模板
+title: 测试使用obsidian模板快速创建博客文章
 published: 2025-08-15
 updated: 2025-08-15
-description: 
+description: 测试使用obsidian模板快速创建博客文章
 author: mio
-tags: 
-category: 
+tags:
+  - 未归档
+category: 未归档
 draft: false
 ---
-测试成功！！
+
 <% tp.file.cursor() %>
