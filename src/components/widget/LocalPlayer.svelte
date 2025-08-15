@@ -121,6 +121,10 @@ async function setupScroll() {
     class="cover"
     class:spinning={playing}
     on:click={togglePlay}
+    on:error={(e) => {
+      console.error('图片加载失败：', e.target.src)
+      // e.target.src = '/src/assets/images/魔法使之夜OST.webp'
+    }}
   />
 
   <div class="info">
