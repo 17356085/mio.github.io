@@ -13,26 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/posts/2025/搭建博客教程（一）.md",
+                "file": "src/content/posts/2025/SpringBoot项目.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "搭建博客教程（一）"
-            }
-          },
-          {
-            "id": "43d4f69319ffa564",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "[Obsidian.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "[Obsidian"
+              "title": "SpringBoot项目"
             }
           }
         ]
@@ -92,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "7804f98cafdef041",
@@ -196,8 +181,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "deef6bbf3d1b7ba3",
+  "active": "a6d4ca2eb733fc0e",
   "lastOpenFiles": [
+    "src/content/posts/2025/为博客添加评论区功能.md",
+    "src/content/posts/2025/搭建博客教程（一）.md",
+    "src/content/posts/2025/SpringBoot项目.md",
+    "src/content/posts/2025/测试通过Obsidian管理博客文章.md",
+    "src/content/posts/2025/成功部署博客到GithubPages.md",
+    "src/content/posts/2025/git笔记.md",
+    "src/content/posts/2025/测试使用obsidian模板快速创建博客文章.md",
+    "[Obsidian.md",
     "dist/pagefind/index/zh-cn_ae5035e.pf_index",
     "dist/pagefind/fragment/zh-cn_915d288.pf_fragment",
     "dist/pagefind/fragment/zh-cn_fd1f83e.pf_fragment",
@@ -208,7 +201,6 @@
     "dist/pagefind/fragment/zh-cn_3a4383b.pf_fragment",
     "dist/pagefind/fragment/zh-cn_1ed3fb1.pf_fragment",
     "dist/pagefind/wasm.unknown.pagefind",
-    "dist/pagefind/pagefind.js",
     "dist/_astro/魔法使之夜.BbR0eWzz_D2ESC.webp",
     "dist/_astro/祥子.PubFqEXK_1Lzh0b.webp",
     "dist/_astro/祥子.PubFqEXK.png",
@@ -220,15 +212,7 @@
     "dist/img/魔法使之夜1.jpg",
     "dist/img/魔法使之夜.jpg",
     "[Git.md",
-    "src/content/posts/2025/搭建博客教程（一）.md",
-    "[Obsidian.md",
     "github.com.md",
-    "src/content/posts/2025/测试通过Obsidian管理博客文章.md",
-    "src/content/posts/2025/成功部署博客到GithubPages.md",
-    "src/content/posts/2025/为博客添加评论区功能.md",
-    "src/content/posts/2025/git笔记.md",
-    "src/content/posts/2025/project.md",
-    "src/content/posts/2025/测试使用obsidian模板快速创建博客文章.md",
     "templates/博客文章模板.md",
     "src/content/posts/2025/测试使用obsidian模板快速撰写一篇文章.md",
     "Invalid date.md",

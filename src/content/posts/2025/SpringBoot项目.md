@@ -1,12 +1,12 @@
 ---
-title: '苍穹外卖项目'
-published: 2025-08-08  # 注意这里改为 published 而不是 pubDate
-description: ''
-author: 'mio'
-# image: '../../../assets/images/魔法使之夜.jpg'
-tags: ["苍穹外卖"]
+title: SpringBoot
+published: 2025-08-08
+description: ""
+author: mio
+tags:
+  - 苍穹外卖
 category: 学习记录
-updated: 2025-08-09
+updated: 2025-08-10
 ---
 
 # sky-take-out
