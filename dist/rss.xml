@@ -1,4 +1,119 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>mioの小窝</title><description>四季正与你擦肩而过</description><link>https://17356085.github.io/</link><language>zh_CN</language><item><title>Git笔记</title><link>https://17356085.github.io/posts/2025/git%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://17356085.github.io/posts/2025/git%E7%AC%94%E8%AE%B0/</guid><description>一些git常用的指令。</description><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;以下是 Git 最常用的核心指令清单，分为 &lt;strong&gt;基础操作&lt;/strong&gt;、&lt;strong&gt;分支管理&lt;/strong&gt;、&lt;strong&gt;撤销操作&lt;/strong&gt; 和 &lt;strong&gt;远程协作&lt;/strong&gt; 四类，附带通俗解释：&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>mioの小窝</title><description>四季正与你擦肩而过</description><link>https://devmio.cc/</link><language>zh_CN</language><item><title>测试Obsidian管理博客的文章</title><link>https://devmio.cc/posts/2025/%E6%B5%8B%E8%AF%95%E9%80%9A%E8%BF%87obsidian%E7%AE%A1%E7%90%86%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</link><guid isPermaLink="true">https://devmio.cc/posts/2025/%E6%B5%8B%E8%AF%95%E9%80%9A%E8%BF%87obsidian%E7%AE%A1%E7%90%86%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</guid><description>这是我 Astro 博客的第一篇文章。</description><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;OK,Hello Obsidian！！&lt;/p&gt;
+</content:encoded></item><item><title>测试博客 CICD 自动部署功能</title><link>https://devmio.cc/posts/2025/%E6%B5%8B%E8%AF%95ci/%E6%B5%8B%E8%AF%95cicd%E5%8A%9F%E8%83%BD%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8/</link><guid isPermaLink="true">https://devmio.cc/posts/2025/%E6%B5%8B%E8%AF%95ci/%E6%B5%8B%E8%AF%95cicd%E5%8A%9F%E8%83%BD%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8/</guid><description>通过一次内容更新，验证 GitHub Actions 自动构建与部署是否生效</description><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;ol&gt;
+&lt;li&gt;修改博客内容并提交&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在博客源码任意 Markdown 文章中，添加一行测试内容，例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;本次提交用于测试 CICD 自动部署功能。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;保存后，将更改 push 到 GitHub 仓库主分支。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;检查 GitHub Actions 状态&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;进入你的仓库页面，点击顶部的 &lt;strong&gt;Actions&lt;/strong&gt; 标签页，查看最新一次 workflow 运行记录。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;若显示绿色 √，说明构建和部署流程执行成功。&lt;/li&gt;
+&lt;li&gt;若显示红色 ×，点击进入可查看详细报错信息。
+vault backup: {{date}}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;验证博客页面内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;等待几分钟后，访问你的博客 GitHub Pages 地址，确认刚才添加的测试内容已经出现在页面上。&lt;br /&gt;
+如果内容已更新，说明 CICD 自动部署功能正常。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;清理测试内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;测试完成后，可将测试内容删除并再次 push，保持博客内容整洁。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;blockquote&gt;
+&lt;p&gt;通过上述步骤，你可以方便地验证博客的自动构建与部署流程是否工作正确&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;成功搭建&lt;/p&gt;
+</content:encoded></item><item><title>为博客配置评论区</title><link>https://devmio.cc/posts/2025/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%8A%9F%E8%83%BD/</link><guid isPermaLink="true">https://devmio.cc/posts/2025/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%8A%9F%E8%83%BD/</guid><description>还支持亮色暗色模式切换</description><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;配置 GitHub 仓库
+进入 giscus 官网。
+按页面提示，选择你的 GitHub 仓库（建议用你的博客源码仓库或专门新建一个公开仓库）。
+授权 giscus 访问你的仓库，并自动创建 Discussions。
+选择 Discussions 分类（如 General），并设置其它参数（如主题、语言等）。
+页面下方会生成一段 &amp;lt;script ...&amp;gt;&amp;lt;/script&amp;gt; 代码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在 misc 目录下新建 Giscus.astro 文件，内容如下（用你自己的参数替换）：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&quot;giscus-comments&quot;&amp;gt;&amp;lt;/div&amp;gt;
+
+&amp;lt;script src=&quot;https://giscus.app/client.js&quot;
+        data-repo=&quot;[在此输入仓库]&quot;
+        data-repo-id=&quot;[在此输入仓库 ID]&quot;
+        data-category=&quot;[在此输入分类名]&quot;
+        data-category-id=&quot;[在此输入分类 ID]&quot;
+        data-mapping=&quot;pathname&quot;
+        data-strict=&quot;0&quot;
+        data-reactions-enabled=&quot;1&quot;
+        data-emit-metadata=&quot;0&quot;
+        data-input-position=&quot;bottom&quot;
+        data-theme=&quot;preferred_color_scheme&quot;
+        data-lang=&quot;zh-CN&quot;
+        crossorigin=&quot;anonymous&quot;
+        async&amp;gt;
+&amp;lt;/script&amp;gt;
+
+&amp;lt;script is:inline&amp;gt;
+  // 你站点的暗色主题 class，通常是 &apos;dark&apos;
+  const DARK_CLASS = &apos;dark&apos;;
+  // giscus 支持的主题名
+  const LIGHT_THEME = &apos;light&apos;;
+  const DARK_THEME = &apos;dark&apos;;
+
+  function setGiscusTheme(theme) {
+    const iframe = document.querySelector(&apos;iframe.giscus-frame&apos;);
+    if (!iframe) return;
+    iframe.contentWindow.postMessage(
+      {
+        giscus: {
+          setConfig: {
+            theme: theme,
+          },
+        },
+      },
+      &apos;https://giscus.app&apos;
+    );
+  }
+
+  // 检查当前主题
+  function getCurrentTheme() {
+    return document.documentElement.classList.contains(DARK_CLASS) ? DARK_THEME : LIGHT_THEME;
+  }
+
+  // 初始设置
+  window.addEventListener(&apos;DOMContentLoaded&apos;, () =&amp;gt; {
+    setTimeout(() =&amp;gt; setGiscusTheme(getCurrentTheme()), 500);
+  });
+
+  // 监听主题切换（假设你的主题切换会修改 &amp;lt;html&amp;gt; 的 class）
+  const observer = new MutationObserver(() =&amp;gt; {
+    setGiscusTheme(getCurrentTheme());
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: [&apos;class&apos;] });
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;在 [...slug].astro 中这样导入和使用：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;import Giscus from &quot;../../components/misc/Giscus.astro&quot;;
+// ...existing code...
+
+&amp;lt;!-- 推荐插入在 License 之后、分页导航之前 --&amp;gt;
+{licenseConfig.enable &amp;amp;&amp;amp; &amp;lt;License ... /&amp;gt;}
+&amp;lt;Giscus /&amp;gt;
+
+&amp;lt;div class=&quot;flex flex-col md:flex-row justify-between mb-4 gap-4 overflow-hidden w-full&quot;&amp;gt;
+  {/* ...分页导航... */}
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>Git笔记</title><link>https://devmio.cc/posts/2025/git%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://devmio.cc/posts/2025/git%E7%AC%94%E8%AE%B0/</guid><description>一些git常用的指令。</description><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;以下是 Git 最常用的核心指令清单，分为 &lt;strong&gt;基础操作&lt;/strong&gt;、&lt;strong&gt;分支管理&lt;/strong&gt;、&lt;strong&gt;撤销操作&lt;/strong&gt; 和 &lt;strong&gt;远程协作&lt;/strong&gt; 四类，附带通俗解释：&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h3&gt;一、基础操作（每天必用）&lt;/h3&gt;
 &lt;table&gt;
@@ -192,105 +307,7 @@
   df = diff
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
-</content:encoded></item><item><title>为博客配置评论区</title><link>https://17356085.github.io/posts/2025/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%8A%9F%E8%83%BD/</link><guid isPermaLink="true">https://17356085.github.io/posts/2025/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%8A%9F%E8%83%BD/</guid><description>还支持亮色暗色模式切换</description><pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;配置 GitHub 仓库
-进入 giscus 官网。
-按页面提示，选择你的 GitHub 仓库（建议用你的博客源码仓库或专门新建一个公开仓库）。
-授权 giscus 访问你的仓库，并自动创建 Discussions。
-选择 Discussions 分类（如 General），并设置其它参数（如主题、语言等）。
-页面下方会生成一段 &amp;lt;script ...&amp;gt;&amp;lt;/script&amp;gt; 代码。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;在 misc 目录下新建 Giscus.astro 文件，内容如下（用你自己的参数替换）：&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&quot;giscus-comments&quot;&amp;gt;&amp;lt;/div&amp;gt;
-
-&amp;lt;script src=&quot;https://giscus.app/client.js&quot;
-
-  data-repo=&quot;17356085/17356085.github.io&quot;
-
-  data-repo-id=&quot;R_kgDOPcYMPg&quot;
-
-  data-category=&quot;Announcements&quot;
-
-  data-category-id=&quot;DIC_kwDOPcYMPs4CuH1t&quot;
-
-  data-mapping=&quot;pathname&quot;
-
-  data-strict=&quot;0&quot;
-
-  data-reactions-enabled=&quot;1&quot;
-
-  data-emit-metadata=&quot;0&quot;
-
-  data-input-position=&quot;bottom&quot;
-
-  data-theme=&quot;light&quot;
-
-  data-lang=&quot;zh-CN&quot;
-
-  crossorigin=&quot;anonymous&quot;
-
-  async&amp;gt;
-
-&amp;lt;/script&amp;gt;
-
-&amp;lt;script is:inline&amp;gt;
-  // 你站点的暗色主题 class，通常是 &apos;dark&apos;
-  const DARK_CLASS = &apos;dark&apos;;
-  // giscus 支持的主题名
-  const LIGHT_THEME = &apos;light&apos;;
-  const DARK_THEME = &apos;dark&apos;;
-
-  function setGiscusTheme(theme) {
-    const iframe = document.querySelector(&apos;iframe.giscus-frame&apos;);
-    if (!iframe) return;
-    iframe.contentWindow.postMessage(
-      {
-        giscus: {
-          setConfig: {
-            theme: theme,
-          },
-        },
-      },
-      &apos;https://giscus.app&apos;
-    );
-  }
-
-  // 检查当前主题
-  function getCurrentTheme() {
-    return document.documentElement.classList.contains(DARK_CLASS) ? DARK_THEME : LIGHT_THEME;
-  }
-
-  // 初始设置
-  window.addEventListener(&apos;DOMContentLoaded&apos;, () =&amp;gt; {
-    setTimeout(() =&amp;gt; setGiscusTheme(getCurrentTheme()), 500);
-  });
-
-  // 监听主题切换（假设你的主题切换会修改 &amp;lt;html&amp;gt; 的 class）
-  const observer = new MutationObserver(() =&amp;gt; {
-    setGiscusTheme(getCurrentTheme());
-  });
-  observer.observe(document.documentElement, { attributes: true, attributeFilter: [&apos;class&apos;] });
-&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;在 [...slug].astro 中这样导入和使用：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;import Giscus from &quot;../../components/misc/Giscus.astro&quot;;
-// ...existing code...
-
-&amp;lt;!-- 推荐插入在 License 之后、分页导航之前 --&amp;gt;
-{licenseConfig.enable &amp;amp;&amp;amp; &amp;lt;License ... /&amp;gt;}
-&amp;lt;Giscus /&amp;gt;
-
-&amp;lt;div class=&quot;flex flex-col md:flex-row justify-between mb-4 gap-4 overflow-hidden w-full&quot;&amp;gt;
-  {/* ...分页导航... */}
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>我的技术学习笔记</title><link>https://17356085.github.io/posts/guide/</link><guid isPermaLink="true">https://17356085.github.io/posts/guide/</guid><description>记录我在编程学习路上的点滴心得与遇到的问题</description><pubDate>Tue, 12 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;大家好！这是我用 Fuwari 模板搭建的第一个博客，主要用来记录我的编程学习历程。&lt;/p&gt;
+</content:encoded></item><item><title>我的技术学习笔记</title><link>https://devmio.cc/posts/guide/</link><guid isPermaLink="true">https://devmio.cc/posts/guide/</guid><description>记录我在编程学习路上的点滴心得与遇到的问题</description><pubDate>Tue, 12 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;大家好！这是我用 Fuwari 模板搭建的第一个博客，主要用来记录我的编程学习历程。&lt;/p&gt;
 &lt;h2&gt;今日学习内容&lt;/h2&gt;
 &lt;p&gt;今天主要学习了 Markdown 的基本语法和 Fuwari 模板的使用方法，总结几点收获：&lt;/p&gt;
 &lt;ol&gt;
@@ -303,7 +320,7 @@
 console.log(&quot;Hello, Fuwari!&quot;);&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-</content:encoded></item><item><title>GithubPages部署成功!!</title><link>https://17356085.github.io/posts/2025/%E6%88%90%E5%8A%9F%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0githubpages/</link><guid isPermaLink="true">https://17356085.github.io/posts/2025/%E6%88%90%E5%8A%9F%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0githubpages/</guid><description>这是我 Astro 博客的第一篇文章。</description><pubDate>Mon, 11 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;我的第一篇博客文章&lt;/h1&gt;
+</content:encoded></item><item><title>GithubPages部署成功!!</title><link>https://devmio.cc/posts/2025/%E6%88%90%E5%8A%9F%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0githubpages/</link><guid isPermaLink="true">https://devmio.cc/posts/2025/%E6%88%90%E5%8A%9F%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0githubpages/</guid><description>这是我 Astro 博客的第一篇文章。</description><pubDate>Mon, 11 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;我的第一篇博客文章&lt;/h1&gt;
 &lt;p&gt;欢迎来到我学习关于 Astro 的新博客！在这里，我将分享我建立新网站的学习历程。&lt;/p&gt;
 &lt;h2&gt;我做了什么&lt;/h2&gt;
 &lt;ol&gt;
@@ -319,7 +336,7 @@ console.log(&quot;Hello, Fuwari!&quot;);&lt;/code&gt;&lt;/pre&gt;
 &lt;/ol&gt;
 &lt;h2&gt;下一步计划&lt;/h2&gt;
 &lt;p&gt;我将完成 Astro 教程，然后继续编写更多内容。关注我以获取更多信息。&lt;/p&gt;
-</content:encoded></item><item><title>苍穹外卖项目</title><link>https://17356085.github.io/posts/2025/project/</link><guid isPermaLink="true">https://17356085.github.io/posts/2025/project/</guid><pubDate>Fri, 08 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;sky-take-out&lt;/h1&gt;
+</content:encoded></item><item><title>苍穹外卖项目</title><link>https://devmio.cc/posts/2025/project/</link><guid isPermaLink="true">https://devmio.cc/posts/2025/project/</guid><pubDate>Fri, 08 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;sky-take-out&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;在项目学习过程中发现需要学习（复习的知识）&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
