@@ -11,4 +11,3 @@ draft: false
 image: ../../../assets/images/祥子.png
 ---
 测试成功！！！
-<% tp.file.cursor() %>
