@@ -68,8 +68,12 @@ function seek(e) {
 onMount(async () => {
 	audio = new Audio();
 	audio.loop = false;
-	audio.addEventListener("loadedmetadata", () => (duration = audio.duration));
-	audio.addEventListener("timeupdate", () => (current = audio.currentTime));
+	audio.addEventListener("loadedmetadata", () => {
+		duration = audio.duration;
+	});
+	audio.addEventListener("timeupdate", () => {
+		current = audio.currentTime;
+	});
 	audio.addEventListener("ended", () => next());
 
 	playCurrent();
