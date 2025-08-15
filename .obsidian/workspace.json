@@ -191,7 +191,6 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "terminal:Open terminal": false,
       "obsidian-git:Open Git source control": false,
       "obsidian42-brat:BRAT": false,
       "templater-obsidian:Templater": false
