@@ -7,5 +7,5 @@ author: 你的名字
 tags: 
 draft: false
 ---
-测试成功！！
+模板测试成功！！
 <% tp.file.cursor() %>
