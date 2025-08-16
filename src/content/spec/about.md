@@ -5,7 +5,6 @@
 ::github{repo="17356085/17356085.github.io"}
 
 > ### 施工中🚧
->
-> - [Unsplash](https://unsplash.com/)
-> - [星と少女](https://www.pixiv.net/artworks/108916539) by [Stella](https://www.pixiv.net/users/93273965)
-> - [Rabbit - v1.4 Showcase](https://civitai.com/posts/586908) by [Rabbit_YourMajesty](https://civitai.com/user/Rabbit_YourMajesty)
+
+我认为夜晚是一个能让自己书写满溢的思绪的时间，2025年8月17日的凌晨3点27分，在我过完了魔法使之夜第十二章后。
+那些承载无限的未知和可能的事物，在我短短二十年的人生当中，小说姑且算得上一个，童年时坐在扫帚，在天空中飞驰的圆框眼镜的少年，依旧倒映在我的脑海；耳边流淌的音乐，好像一滴滴晶莹剔透的雨滴掉入平静的湖面，泛起整整涟漪，即使现在我也还记得；
