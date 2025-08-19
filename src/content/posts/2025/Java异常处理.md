@@ -10,9 +10,8 @@ tags:
 category: 后端
 draft: false
 ---
-## Java异常处理
 
-### 1. 异常体系结构
+## 1. 异常体系结构
 
 ```
 Throwable
@@ -33,7 +32,7 @@ Throwable
         └── InterruptedException
 ```
 
-### 2 异常分类
+## 2 异常分类
 
 **检查异常 (Checked Exception)**
 
@@ -52,7 +51,7 @@ Throwable
 - JVM系统级错误，程序无法处理
 - 常见：OutOfMemoryError、StackOverflowError
 
-### 3 异常处理语法
+## 3 异常处理语法
 
 #### try-catch-finally语句
 
@@ -104,7 +103,7 @@ public void setAge(int age) {
 }
 ```
 
-### 4 自定义异常
+## 4 自定义异常
 
 ```java
 // 自定义检查异常
@@ -122,7 +121,7 @@ public class CustomRuntimeException extends RuntimeException {
 }
 ```
 
-### 5 异常处理最佳实践
+## 5 异常处理最佳实践
 
 5.1 **不要忽略异常**
 
@@ -165,7 +164,7 @@ try {
 - Service层：业务异常处理
 - Controller层：异常统一处理和响应格式化
 
-### 6 异常处理建议
+## 6 异常处理建议
 
 1. 尽早发现异常，就近处理
 2. 不要忽略异常，至少要记录日志
