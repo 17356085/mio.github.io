@@ -1,5 +1,5 @@
 ---
-title: Java反射机制
+title: Java反射机制与动态代理
 published: 2025-08-18
 updated: 2025-08-18
 description: 对Spring框架底层实现不理解，回来恶补基础（😭
@@ -10,7 +10,7 @@ tags:
 category: 后端
 draft: false
 ---
-# 反射机制
+# 反射机制与动态代理
 
 > - 如何获取class字节码文件的对象
 > - 利用反射如何获取构造方法（创建对象）
