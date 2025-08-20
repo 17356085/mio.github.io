@@ -1,8 +1,8 @@
 ---
-title: 面向切面编程
+title: Spring AOP
 published: 2025-08-18
 updated: 2025-08-18
-description: Spring面向切面编程
+description: 敲项目的时候，偶遇切面代码，拼尽全力无法战胜，遂回来恶补基础
 author: mio
 tags:
   - Spring框架
@@ -22,7 +22,7 @@ draft: false
 - 第二：程序员无法专注核心业务代码的编写，在编写核心业务代码的同时还需要处理这些交叉业务。
 
 使用AOP可以很轻松的解决以上问题。
-![[SpringAOP01.png]]
+![img](SpringAOP01.png)
 1️⃣ **使用AOP的好处**：
 1. 代码复用性增强
 2. 代码易维护
@@ -34,7 +34,7 @@ draft: false
 ## 2. AOP相关概念
 
 ### 2.1 术语
-![[SpringAOP02.png]]
+![img](SpringAOP02.png)
 
 - **连接点 Joinpoint**：在程序的整个执行流程中，**可以织入**切面的位置。方法的执行前后，异常抛出之后等位置。
         
@@ -77,7 +77,7 @@ execution([访问控制权限修饰符] 返回值类型 [权限定类名] 方法
 ### 3.1 配置
 
 1️⃣使用Spring+Aspectj的AOP需要引入如下依赖：
-```java
+```xml
 <!--spring context依赖-->
 <dependency>
   <groupId>org.springframework</groupId>
@@ -99,7 +99,7 @@ execution([访问控制权限修饰符] 返回值类型 [权限定类名] 方法
 ```
 
 2️⃣ Spring配置文件中添加context和aop命名空间
-```java
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -155,7 +155,7 @@ public class MyAspect {
 - 在切面类MyAspect类上添加**@Component**注解。
 
 4️⃣ 在Spring配置文件分钟添加组件扫描
-```java
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -213,7 +213,7 @@ public class MyAspect {
 - <aop:aspectj-autoproxy proxy-target-class="true"/> 开启自动代理之后，凡事带有@Aspect注解的bean都会生成代理对象。 
 - proxy-target-class="true" 表示采用cglib动态代理。 
 - proxy-target-class="false" 表示采用jdk动态代理。默认值是false。即使写成false，当没有接口的时候，也会自动选择cglib生成代理类。
-```java
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -368,7 +368,7 @@ public void testAOPWithAllAnnotation(){
 2️⃣ 编写切面类，并编写通知（略）
 
 3️⃣编写Spring配置文件
-```java
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
