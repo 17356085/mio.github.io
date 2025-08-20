@@ -539,7 +539,7 @@ public class MyReflectDemo {
 > - 方法调用前后增强
 
 ### 6.1 理解代理模式
-![img](Java动态代理.png)
+![img](public/img/Java动态代理.png)
 
 ```java
 // 抽象主题接口
