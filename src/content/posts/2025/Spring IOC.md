@@ -575,3 +575,330 @@ public void testNoXml(){
     userService.save();
 }
 ```
+
+## 4. Spring IoC容器底层实现原理
+
+### 4.1 核心架构设计
+
+#### 容器接口层次结构
+
+```java
+BeanFactory (顶层接口)
+    ├── ListableBeanFactory (可列举Bean)
+    ├── HierarchicalBeanFactory (分层Bean工厂)
+    ├── ConfigurableBeanFactory (可配置Bean工厂)
+    └── ApplicationContext (应用上下文)
+            ├── ConfigurableApplicationContext
+            └── AbstractApplicationContext (抽象实现)
+```
+
+**核心接口职责：**
+
+- `BeanFactory`：基础容器，定义了getBean()等基本方法
+- `ApplicationContext`：高级容器，提供事件发布、国际化等企业功能
+- `ConfigurableApplicationContext`：可配置的应用上下文
+
+### 4.2 底层实现机制
+
+#### 4.2.1 Bean定义注册机制
+
+**BeanDefinition数据结构**
+
+```java
+public class GenericBeanDefinition implements BeanDefinition {
+    private String beanClassName;           // Bean类名
+    private String scope = SCOPE_SINGLETON; // 作用域
+    private boolean lazyInit = false;       // 是否懒加载
+    private ConstructorArgumentValues constructorArgumentValues; // 构造参数
+    private MutablePropertyValues propertyValues; // 属性值
+    private String initMethodName;          // 初始化方法
+    private String destroyMethodName;       // 销毁方法
+}
+```
+
+**注册流程**
+
+```java
+// DefaultListableBeanFactory核心注册方法
+public void registerBeanDefinition(String beanName, BeanDefinition beanDefinition) {
+    // 1. 验证BeanDefinition
+    if (beanDefinition instanceof AbstractBeanDefinition) {
+        ((AbstractBeanDefinition) beanDefinition).validate();
+    }
+    
+    // 2. 检查是否已存在
+    BeanDefinition existingDefinition = this.beanDefinitionMap.get(beanName);
+    if (existingDefinition != null) {
+        // 处理覆盖逻辑
+    }
+    
+    // 3. 注册到容器
+    this.beanDefinitionMap.put(beanName, beanDefinition);
+    this.beanDefinitionNames.add(beanName);
+}
+```
+
+#### 4.2.2 Bean实例化核心流程
+
+**AbstractAutowireCapableBeanFactory.createBean()方法**
+
+```java
+protected Object createBean(String beanName, RootBeanDefinition mbd, Object[] args) {
+    // 1. 解析Bean类型
+    Class<?> resolvedClass = resolveBeanClass(mbd, beanName);
+    
+    // 2. 准备方法覆盖
+    mbd.prepareMethodOverrides();
+    
+    // 3. 给BeanPostProcessor机会返回代理对象
+    Object bean = resolveBeforeInstantiation(beanName, mbd);
+    if (bean != null) {
+        return bean;
+    }
+    
+    // 4. 实际创建Bean
+    Object beanInstance = doCreateBean(beanName, mbd, args);
+    return beanInstance;
+}
+```
+
+**doCreateBean()详细实现**
+
+```java
+protected Object doCreateBean(String beanName, RootBeanDefinition mbd, Object[] args) {
+    BeanWrapper instanceWrapper = null;
+    
+    // 1. 创建Bean实例
+    if (mbd.isSingleton()) {
+        instanceWrapper = this.factoryBeanInstanceCache.remove(beanName);
+    }
+    if (instanceWrapper == null) {
+        instanceWrapper = createBeanInstance(beanName, mbd, args);
+    }
+    
+    Object bean = instanceWrapper.getWrappedInstance();
+    
+    // 2. 解决循环依赖 - 提前暴露Bean
+    boolean earlySingletonExposure = (mbd.isSingleton() && 
+        this.allowCircularReferences && isSingletonCurrentlyInCreation(beanName));
+    if (earlySingletonExposure) {
+        addSingletonFactory(beanName, () -> getEarlyBeanReference(beanName, mbd, bean));
+    }
+    
+    // 3. 填充属性（依赖注入）
+    populateBean(beanName, mbd, instanceWrapper);
+    
+    // 4. 初始化Bean
+    Object exposedObject = initializeBean(beanName, bean, mbd);
+    
+    return exposedObject;
+}
+```
+
+#### 4.2.3 三级缓存解决循环依赖
+
+**DefaultSingletonBeanRegistry缓存结构**
+
+```java
+public class DefaultSingletonBeanRegistry {
+    // 一级缓存：完成初始化的单例Bean
+    private final Map<String, Object> singletonObjects = new ConcurrentHashMap<>(256);
+    
+    // 二级缓存：完成实例化但未完成初始化的Bean
+    private final Map<String, Object> earlySingletonObjects = new ConcurrentHashMap<>(16);
+    
+    // 三级缓存：Bean工厂对象，用于解决循环依赖
+    private final Map<String, ObjectFactory<?>> singletonFactories = new HashMap<>(16);
+    
+    // 正在创建的Bean名称
+    private final Set<String> singletonsCurrentlyInCreation = 
+        Collections.newSetFromMap(new ConcurrentHashMap<>(16));
+}
+```
+
+**获取单例Bean流程**
+
+```java
+protected Object getSingleton(String beanName, boolean allowEarlyReference) {
+    // 1. 从一级缓存获取
+    Object singletonObject = this.singletonObjects.get(beanName);
+    
+    // 2. 一级缓存没有且正在创建中
+    if (singletonObject == null && isSingletonCurrentlyInCreation(beanName)) {
+        // 从二级缓存获取
+        singletonObject = this.earlySingletonObjects.get(beanName);
+        
+        // 3. 二级缓存也没有且允许早期引用
+        if (singletonObject == null && allowEarlyReference) {
+            synchronized (this.singletonObjects) {
+                // 双重检查
+                singletonObject = this.singletonObjects.get(beanName);
+                if (singletonObject == null) {
+                    singletonObject = this.earlySingletonObjects.get(beanName);
+                    if (singletonObject == null) {
+                        // 4. 从三级缓存获取ObjectFactory
+                        ObjectFactory<?> singletonFactory = this.singletonFactories.get(beanName);
+                        if (singletonFactory != null) {
+                            singletonObject = singletonFactory.getObject();
+                            // 移到二级缓存
+                            this.earlySingletonObjects.put(beanName, singletonObject);
+                            this.singletonFactories.remove(beanName);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return singletonObject;
+}
+```
+
+#### 4.2.4. 依赖注入实现机制
+
+**AutowiredAnnotationBeanPostProcessor核心逻辑**
+
+```java
+public PropertyValues postProcessPropertyValues(PropertyValues pvs, 
+    PropertyDescriptor[] pds, Object bean, String beanName) {
+    
+    // 1. 查找需要注入的元数据
+    InjectionMetadata metadata = findAutowiringMetadata(beanName, bean.getClass(), pvs);
+    
+    // 2. 执行注入
+    metadata.inject(bean, beanName, pvs);
+    return pvs;
+}
+
+// 字段注入实现
+private class AutowiredFieldElement extends InjectionMetadata.InjectedElement {
+    protected void inject(Object bean, String beanName, PropertyValues pvs) {
+        Field field = (Field) this.member;
+        Object value;
+        
+        // 解析依赖
+        DependencyDescriptor desc = new DependencyDescriptor(field, this.required);
+        value = beanFactory.resolveDependency(desc, beanName, autowiredBeanNames, typeConverter);
+        
+        // 反射设置字段值
+        if (value != null) {
+            ReflectionUtils.makeAccessible(field);
+            field.set(bean, value);
+        }
+    }
+}
+```
+
+#### 4.2.5 Bean生命周期管理
+
+**AbstractAutowireCapableBeanFactory.initializeBean()方法**
+
+```java
+protected Object initializeBean(String beanName, Object bean, RootBeanDefinition mbd) {
+    // 1. 调用Aware接口方法
+    if (System.getSecurityManager() != null) {
+        AccessController.doPrivileged(() -> {
+            invokeAwareMethods(beanName, bean);
+            return null;
+        });
+    } else {
+        invokeAwareMethods(beanName, bean);
+    }
+    
+    Object wrappedBean = bean;
+    if (mbd == null || !mbd.isSynthetic()) {
+        // 2. 调用BeanPostProcessor的postProcessBeforeInitialization
+        wrappedBean = applyBeanPostProcessorsBeforeInitialization(wrappedBean, beanName);
+    }
+    
+    // 3. 调用初始化方法
+    invokeInitMethods(beanName, wrappedBean, mbd);
+    
+    if (mbd == null || !mbd.isSynthetic()) {
+        // 4. 调用BeanPostProcessor的postProcessAfterInitialization
+        wrappedBean = applyBeanPostProcessorsAfterInitialization(wrappedBean, beanName);
+    }
+    
+    return wrappedBean;
+}
+```
+
+#### 4.2.6 容器启动流程
+
+**AbstractApplicationContext.refresh()方法**
+
+```java
+public void refresh() throws BeansException, IllegalStateException {
+    synchronized (this.startupShutdownMonitor) {
+        // 1. 准备刷新上下文
+        prepareRefresh();
+        
+        // 2. 获取BeanFactory
+        ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();
+        
+        // 3. 准备BeanFactory
+        prepareBeanFactory(beanFactory);
+        
+        try {
+            // 4. 允许子类对BeanFactory进行后处理
+            postProcessBeanFactory(beanFactory);
+            
+            // 5. 调用BeanFactoryPostProcessor
+            invokeBeanFactoryPostProcessors(beanFactory);
+            
+            // 6. 注册BeanPostProcessor
+            registerBeanPostProcessors(beanFactory);
+            
+            // 7. 初始化MessageSource
+            initMessageSource();
+            
+            // 8. 初始化事件多播器
+            initApplicationEventMulticaster();
+            
+            // 9. 子类特定的刷新操作
+            onRefresh();
+            
+            // 10. 注册事件监听器
+            registerListeners();
+            
+            // 11. 实例化所有非懒加载的单例Bean
+            finishBeanFactoryInitialization(beanFactory);
+            
+            // 12. 完成刷新
+            finishRefresh();
+        } catch (BeansException ex) {
+            destroyBeans();
+            cancelRefresh(ex);
+            throw ex;
+        }
+    }
+}
+```
+
+### 4.3 关键技术实现
+
+#### 1. 反射机制运用
+
+- 使用`Class.forName()`加载类
+- 通过`Constructor.newInstance()`创建实例
+- 使用`Method.invoke()`调用方法
+- 通过`Field.set()`设置字段值
+
+#### 2. 工厂模式实现
+
+- BeanFactory作为顶层工厂接口
+- 不同实现提供不同的Bean创建策略
+- ObjectFactory用于延迟创建和解决循环依赖
+
+#### 3. 策略模式应用
+
+- InstantiationStrategy：实例化策略
+- AutowireCapableBeanFactory：自动装配策略
+- BeanPostProcessor：Bean后处理策略
+
+#### 4. 观察者模式
+
+- ApplicationEvent事件机制
+- ApplicationListener监听器
+- ApplicationEventMulticaster事件多播器
+
+Spring IoC容器的底层实现充分体现了面向对象设计原则，通过精巧的架构设计和多种设计模式的综合运用，实现了高度灵活和可扩展的依赖注入容器。
