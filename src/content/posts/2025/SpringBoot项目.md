@@ -26,12 +26,12 @@ updated: 2025-08-10
 
 ### 核心依赖版本信息
 
-| 依赖类别    | 版本号  | 说明                          |
-| ----------- | ------- | ----------------------------- |
-| Spring Boot | 3.2.0   | 支持 Java 21 的最新稳定版本   |
-| Java        | 21      | 项目使用的 Java 版本          |
-| MyBatis     | 3.0.3   | 适配 Spring Boot 3 的版本     |
-| Lombok      | 1.18.30 | 简化 Java 代码的工具库        |
+| 依赖类别        | 版本号     | 说明                      |
+| ----------- | ------- | ----------------------- |
+| Spring Boot | 3.2.0   | 支持 Java 21 的最新稳定版本      |
+| Java        | 21      | 项目使用的 Java 版本           |
+| MyBatis     | 3.0.3   | 适配 Spring Boot 3 的版本    |
+| Lombok      | 1.18.30 | 简化 Java 代码的工具库          |
 | FastJSON    | 2.0.32  | 支持 Java 17 + 的 JSON 处理库 |
 
 ### 各模块依赖详情
@@ -61,19 +61,19 @@ updated: 2025-08-10
 
 该模块是项目的核心业务模块，依赖关系如下：
 
-| 依赖来源    | 具体依赖                                                  | 用途                        |
-| ----------- | --------------------------------------------------------- | --------------------------- |
-| 自定义模块  | sky-common、sky-pojo                                      | 项目内部通用模块            |
+| 依赖来源        | 具体依赖                                                     | 用途                     |
+| ----------- | -------------------------------------------------------- | ---------------------- |
+| 自定义模块       | sky-common、sky-pojo                                      | 项目内部通用模块               |
 | Spring Boot | spring-boot-starter、spring-boot-starter-web              | Spring Boot 核心及 Web 支持 |
-| Spring Boot | spring-boot-starter-test                                  | 单元测试支持                |
-| 数据库      | mysql-connector-j、mybatis-spring-boot-starter            | 数据库连接与 ORM 框架       |
-| 工具类      | lombok、fastjson、druid-spring-boot-starter               | 工具类与数据库连接池        |
-| 工具类      | pagehelper-spring-boot-starter                            | 分页查询支持                |
-| AOP         | aspectjrt、aspectjweaver                                  | 面向切面编程                |
-| API 文档    | knife4j-openapi3-jakarta-spring-boot-starter              | 接口文档生成                |
-| 缓存        | spring-boot-starter-data-redis、spring-boot-starter-cache | Redis 缓存支持              |
-| 实时通信    | spring-boot-starter-websocket                             | WebSocket 支持              |
-| 文档处理    | poi、poi-ooxml                                            | Excel 导入导出              |
+| Spring Boot | spring-boot-starter-test                                 | 单元测试支持                 |
+| 数据库         | mysql-connector-j、mybatis-spring-boot-starter            | 数据库连接与 ORM 框架          |
+| 工具类         | lombok、fastjson、druid-spring-boot-starter                | 工具类与数据库连接池             |
+| 工具类         | pagehelper-spring-boot-starter                           | 分页查询支持                 |
+| AOP         | aspectjrt、aspectjweaver                                  | 面向切面编程                 |
+| API 文档      | knife4j-openapi3-jakarta-spring-boot-starter             | 接口文档生成                 |
+| 缓存          | spring-boot-starter-data-redis、spring-boot-starter-cache | Redis 缓存支持             |
+| 实时通信        | spring-boot-starter-websocket                            | WebSocket 支持           |
+| 文档处理        | poi、poi-ooxml                                            | Excel 导入导出             |
 
 #### 3. sky-common 模块依赖
 

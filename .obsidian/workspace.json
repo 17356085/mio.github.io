@@ -8,49 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "49002e0028d14381",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/content/posts/2025/Java反射机制与动态代理.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Java反射机制与动态代理"
-            }
-          },
-          {
             "id": "7100dd9eca9449a5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/posts/2025/测试使用obsidian模板快速创建博客文章.md",
+                "file": "src/content/posts/2025/Spring AOP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "测试使用obsidian模板快速创建博客文章"
-            }
-          },
-          {
-            "id": "3b14ade8be35af5f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/content/posts/2025/Java多线程&JUC.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Java多线程&JUC"
+              "title": "Spring AOP"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -171,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/content/posts/2025/测试使用obsidian模板快速创建博客文章.md",
+                "file": "src/content/posts/2025/Spring AOP.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "测试使用obsidian模板快速创建博客文章 的大纲"
+              "title": "Spring AOP 的大纲"
             }
           },
           {
@@ -212,20 +183,22 @@
   },
   "active": "7100dd9eca9449a5",
   "lastOpenFiles": [
+    "public/img/SpringAOP02.png",
+    "src/content/posts/2025/Java泛型的设计和使用.md",
+    "public/img/SpringAOP01.png",
+    "src/content/posts/2025/Spring AOP.md",
+    "src/content/posts/2025/Java反射机制与动态代理.md",
+    "src/content/posts/2025/SpringBoot项目.md",
+    "src/content/posts/2025/Java中的注解.md",
+    "src/content/posts/2025/Java多线程&JUC.md",
+    "src/content/posts/2025/测试使用obsidian模板快速创建博客文章.md",
     "src/content/posts/2025/测试通过Obsidian管理博客文章.md",
     "src/content/posts/2025/成功部署博客到GithubPages.md",
     "src/content/posts/2025/搭建博客教程（一）.md",
-    "src/content/posts/2025/面向切面编程AOP.md",
     "src/content/posts/2025/为博客添加评论区功能.md",
     "src/content/posts/2025/CICD的基本概念.md",
-    "src/content/posts/2025/Java多线程&JUC.md",
-    "src/content/posts/2025/Java反射机制与动态代理.md",
-    "src/content/posts/2025/Java泛型的设计和使用.md",
-    "src/content/posts/2025/SpringBoot项目.md",
-    "src/content/posts/2025/Java中的注解.md",
     "src/content/posts/2025/Java异常处理.md",
     "src/content/posts/2025/git笔记.md",
-    "src/content/posts/2025/测试使用obsidian模板快速创建博客文章.md",
     "Java中的注解.md",
     "src/content/spec/about.md",
     "CONTRIBUTING.md",
@@ -256,8 +229,6 @@
     "dist/_astro/魔法使之夜OST.Cvm32m_9.webp",
     "dist/music/魔法使之夜OST.webp",
     "dist/img/魔法使之夜OST.webp",
-    "dist/img/魔法使之夜2.jpg",
-    "dist/img/魔法使之夜1.jpg",
-    "src/content/posts/2025/测试使用obsidian模板快速撰写一篇文章.md"
+    "dist/img/魔法使之夜2.jpg"
   ]
 }
