@@ -72,6 +72,7 @@ const bannerOffset =
 	bannerOffsetByPosition[siteConfig.banner.position || "center"];
 ---
 
+
 <!DOCTYPE html>
 <html lang={siteLang} class="bg-[var(--page-bg)] transition text-[14px] md:text-[16px]"
 	  data-overlayscrollbars-initialize
@@ -153,6 +154,7 @@ const bannerOffset =
 	>
 		<ConfigCarrier></ConfigCarrier>
 		<slot />
+
 
 		<!-- increase the page height during page transition to prevent the scrolling animation from jumping -->
 		<div id="page-height-extend" class="hidden h-[300vh]"></div>
