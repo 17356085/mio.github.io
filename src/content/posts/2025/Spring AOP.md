@@ -151,8 +151,8 @@ public class MyAspect {
 
 3️⃣ 目标类和切面类都纳入Spring bean管理
 
-- 在目标类OrderService上添加**@Component**注解。 
-- 在切面类MyAspect类上添加**@Component**注解。
+- 在目标类OrderService上添加@Component注解。 
+- 在切面类MyAspect类上添加@Component注解。
 
 4️⃣ 在Spring配置文件分钟添加组件扫描
 ```xml

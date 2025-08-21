@@ -2,7 +2,7 @@
 title: Java泛型的设计和使用
 published: 2025-08-20
 updated: 2025-08-20
-description: Java泛型的设计和使用
+description: API响应会涉及到泛型类的设计……
 author: mio
 tags:
   - 项目学习
